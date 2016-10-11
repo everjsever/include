@@ -23,7 +23,7 @@
 //--- panel coordinate
 #define PANEL_X               0
 #define PANEL_Y               20
-#define PANEL_HEIGHT          120
+#define PANEL_HEIGHT          170
 #define PANEL_WIDTH           100 //640
 #define PAYOFF_FONTSIZE       32
 #define DEFAULT_FONTSIZE      14
@@ -125,7 +125,7 @@ private:
    //---- Buttons
    CButton           buttonA;
    CButton           buttonB;
-
+   CButton           buttonC;
    //---- other config parameters
    int               language_idx;
    bool              withHistoryPad;
@@ -174,7 +174,7 @@ protected:
    
    void              OnClickButtonA(void);
    void              OnClickButtonB(void);
-
+   void              OnClickButtonC(void);
    
       
 
@@ -192,6 +192,7 @@ protected:
 EVENT_MAP_BEGIN(CMTKTradePadDialog)
    ON_EVENT(ON_CLICK,buttonA,OnClickButtonA)
    ON_EVENT(ON_CLICK,buttonB,OnClickButtonB)
+   ON_EVENT(ON_CLICK,buttonC,OnClickButtonC)
 
 
 EVENT_MAP_END(CAppDialog)
