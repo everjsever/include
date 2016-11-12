@@ -23,7 +23,7 @@
 //--- panel coordinate
 #define PANEL_X               0
 #define PANEL_Y               20
-#define PANEL_HEIGHT          220
+#define PANEL_HEIGHT          380
 #define PANEL_WIDTH           100 //640
 #define PAYOFF_FONTSIZE       32
 #define DEFAULT_FONTSIZE      14
@@ -82,7 +82,7 @@ public:
    bool              isDemo;
    bool              first_reload;
  
-   long login;
+   long              login;
    void              tradeDisable();      
    void              tradeEnable();    
 private:
@@ -127,6 +127,7 @@ private:
    CButton           buttonB;
    CButton           buttonC;
    CButton           buttonD;
+   CEdit             edit_plan;   
    //---- other config parameters
    int               language_idx;
    bool              withHistoryPad;
@@ -161,7 +162,7 @@ public:
    bool              InitializeDialog(const long chart, const int subwin, const int lang_id, const int defaultTradeTyp);
    
    bool              ClearDialog(const int defaultradeType);
-
+   void              TradePlanWrite();
    //---- update
 
 protected:
